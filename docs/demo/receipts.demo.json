@@ -1,0 +1,275 @@
+{
+  "author": "0xf39Fd6e51aad88F6F4ce6aB8827279cffFb92266",
+  "demo": "DEMO: local anvil chain, public dev keys, made-up fixture prices. Not a real track record.",
+  "disclaimer": "Testnet research record. Paper calls for education, not investment advice.",
+  "generated_at": "2026-11-06T23:19:48Z",
+  "network": {
+    "chain_id": 31337,
+    "explorer": "https://explorer.example.invalid",
+    "ledger": "0x5FbDB2315678afecb367f032d93F642f64180aa3",
+    "ledger_url": "https://explorer.example.invalid/address/0x5FbDB2315678afecb367f032d93F642f64180aa3",
+    "name": "Local anvil"
+  },
+  "prices_source": "fixture (made-up test data)",
+  "receipts": [
+    {
+      "call": {
+        "asset_type": "equity",
+        "baseline": "close on horizon_start_date",
+        "confidence": 0.65,
+        "created_at": "2026-12-15T15:00:00Z",
+        "direction": "up",
+        "event": "Q4 FY2026 earnings",
+        "horizon_end_date": "2027-02-18",
+        "horizon_start_date": "2027-02-10",
+        "thesis_sha256": "6f93461364f7f484b8c8d7e9367db615b63d799b3849e15fd2ec8122b7fd3c61",
+        "ticker": "HOOD"
+      },
+      "commit_tx": "0x70c04ab6b2370325fabcbb9b1f260dc0c8b1ce610361314771d3371f3f685a60",
+      "commit_tx_url": "https://explorer.example.invalid/tx/0x70c04ab6b2370325fabcbb9b1f260dc0c8b1ce610361314771d3371f3f685a60",
+      "commitment": "0xbed0ad9ba0ad79f55aaf36c9693c821f5b9d52e4bb003bbc0ede2f86cef96667",
+      "committed_at": "2026-11-06T23:19:47Z",
+      "id": 0,
+      "reveal_tx": "0x76604524b244a4eb5ff7ddf162cccca82baa9433228acbcddd77b3c0c447fcb9",
+      "reveal_tx_url": "https://explorer.example.invalid/tx/0x76604524b244a4eb5ff7ddf162cccca82baa9433228acbcddd77b3c0c447fcb9",
+      "revealed_at": "2026-11-06T23:19:47Z",
+      "salt": "0xfa37ef5379fbb9d651cb8237bde2f250143066e744ab30bb96c9a726237fbc82",
+      "score": {
+        "benchmark": "SPY",
+        "benchmark_return": 0.010000000000000009,
+        "confidence": 0.65,
+        "direction": "up",
+        "end_close": 54.0,
+        "end_date_used": "2027-02-18",
+        "excess_return": 0.07000000000000006,
+        "hit": true,
+        "id": 0,
+        "return": 0.08000000000000007,
+        "start_close": 50.0,
+        "start_date_used": "2027-02-10",
+        "status": "scored",
+        "ticker": "HOOD"
+      },
+      "status": "revealed",
+      "verified": true
+    },
+    {
+      "call": {
+        "asset_type": "equity",
+        "baseline": "close on horizon_start_date",
+        "confidence": 0.6,
+        "created_at": "2026-12-15T15:00:00Z",
+        "direction": "down",
+        "event": "Q4 FY2026 earnings",
+        "horizon_end_date": "2027-02-18",
+        "horizon_start_date": "2027-02-10",
+        "thesis_sha256": "200e497092812e4ef86c110c0645db9cd15494710df53b25b16be5cf3d609b2a",
+        "ticker": "COIN"
+      },
+      "commit_tx": "0xf34ae1948d3d1613e862209967d1c905b60a148871c91dd5fc4163c758f9b4d6",
+      "commit_tx_url": "https://explorer.example.invalid/tx/0xf34ae1948d3d1613e862209967d1c905b60a148871c91dd5fc4163c758f9b4d6",
+      "commitment": "0xef2a6b7f185779df10aa611864c135e1a50e03c699d1f4c7d19c8afe2802df26",
+      "committed_at": "2026-11-06T23:19:47Z",
+      "id": 1,
+      "reveal_tx": "0x39c9812a1272ab2cb922fb6447a930a7c7956e52807ae4d2812a7fc7b4ae1494",
+      "reveal_tx_url": "https://explorer.example.invalid/tx/0x39c9812a1272ab2cb922fb6447a930a7c7956e52807ae4d2812a7fc7b4ae1494",
+      "revealed_at": "2026-11-06T23:19:47Z",
+      "salt": "0x1ee54eb5de1dd7b1bef489b08975dd7d8b41f478cd78bf27c460584ea2e8ff75",
+      "score": {
+        "benchmark": "SPY",
+        "benchmark_return": 0.010000000000000009,
+        "confidence": 0.6,
+        "direction": "down",
+        "end_close": 190.0,
+        "end_date_used": "2027-02-18",
+        "excess_return": -0.06000000000000005,
+        "hit": true,
+        "id": 1,
+        "return": -0.050000000000000044,
+        "start_close": 200.0,
+        "start_date_used": "2027-02-10",
+        "status": "scored",
+        "ticker": "COIN"
+      },
+      "status": "revealed",
+      "verified": true
+    },
+    {
+      "call": {
+        "asset_type": "equity",
+        "baseline": "close on horizon_start_date",
+        "confidence": 0.7,
+        "created_at": "2026-12-15T15:00:00Z",
+        "direction": "up",
+        "event": "Q4 FY2027 earnings",
+        "horizon_end_date": "2027-03-04",
+        "horizon_start_date": "2027-02-24",
+        "thesis_sha256": "d2255bf8e7c0ae881e2c8ab8f5f72bce3f588e14525a7d3bef5d2a9b81b156f5",
+        "ticker": "NVDA"
+      },
+      "commit_tx": "0x87157b19b926b51398bcdad552a10d2a196bd5f209f9420295cefcec34afdade",
+      "commit_tx_url": "https://explorer.example.invalid/tx/0x87157b19b926b51398bcdad552a10d2a196bd5f209f9420295cefcec34afdade",
+      "commitment": "0x9c08ba36aebf37be9f24cc5506f8f6e1bd9d0f6d618523b47454d67ef03ca95f",
+      "committed_at": "2026-11-06T23:19:47Z",
+      "id": 2,
+      "reveal_tx": "0xe7cb0b48a950c56bb586465877afc5d7b7fc5f0df26609664d49af8364b7788b",
+      "reveal_tx_url": "https://explorer.example.invalid/tx/0xe7cb0b48a950c56bb586465877afc5d7b7fc5f0df26609664d49af8364b7788b",
+      "revealed_at": "2026-11-06T23:19:47Z",
+      "salt": "0x7e121c54be1e788370fbf20561d51e9292834dbac1a1d215c8cc096be877ed33",
+      "score": {
+        "benchmark": "SPY",
+        "benchmark_return": -0.00983606557377048,
+        "confidence": 0.7,
+        "direction": "up",
+        "end_close": 160.0,
+        "end_date_used": "2027-03-04",
+        "excess_return": 0.07650273224043713,
+        "hit": true,
+        "id": 2,
+        "return": 0.06666666666666665,
+        "start_close": 150.0,
+        "start_date_used": "2027-02-24",
+        "status": "scored",
+        "ticker": "NVDA"
+      },
+      "status": "revealed",
+      "verified": true
+    },
+    {
+      "call": {
+        "asset_type": "equity",
+        "baseline": "close on horizon_start_date",
+        "confidence": 0.6,
+        "created_at": "2026-12-15T15:00:00Z",
+        "direction": "up",
+        "event": "Q4 FY2026 earnings",
+        "horizon_end_date": "2027-03-05",
+        "horizon_start_date": "2027-02-25",
+        "thesis_sha256": "f1bce9001b43e26345342e6f2c0a963a2d3546efe71e17359abc2c416259aeae",
+        "ticker": "CBRS"
+      },
+      "commit_tx": "0xfa3902927cd516b8f8053e392c8010e6d63d487674e053e9bcd59a930b5a0976",
+      "commit_tx_url": "https://explorer.example.invalid/tx/0xfa3902927cd516b8f8053e392c8010e6d63d487674e053e9bcd59a930b5a0976",
+      "commitment": "0x973730b53dc752da3ba930a3f4c65bd9563baca75ec0656e6164c84a065e0eb4",
+      "committed_at": "2026-11-06T23:19:47Z",
+      "id": 3,
+      "reveal_tx": "0x4cae8761edb102904c376ea0e50de1923b251199640ec1c913660683dc7e587b",
+      "reveal_tx_url": "https://explorer.example.invalid/tx/0x4cae8761edb102904c376ea0e50de1923b251199640ec1c913660683dc7e587b",
+      "revealed_at": "2026-11-06T23:19:48Z",
+      "salt": "0xa6642083ab8b69b2156c664d970d5ada105eec9a9a6e726127b4050566540033",
+      "score": {
+        "benchmark": "SPY",
+        "benchmark_return": -0.009819967266775809,
+        "confidence": 0.6,
+        "direction": "up",
+        "end_close": 279.0,
+        "end_date_used": "2027-03-05",
+        "excess_return": -0.06018003273322414,
+        "hit": false,
+        "id": 3,
+        "return": -0.06999999999999995,
+        "start_close": 300.0,
+        "start_date_used": "2027-02-25",
+        "status": "scored",
+        "ticker": "CBRS"
+      },
+      "status": "revealed",
+      "verified": true
+    },
+    {
+      "call": {
+        "asset_type": "crypto",
+        "baseline": "close on horizon_start_date",
+        "confidence": 0.55,
+        "created_at": "2026-12-15T15:00:00Z",
+        "direction": "up",
+        "event": "price horizon",
+        "horizon_end_date": "2027-01-29",
+        "horizon_start_date": "2027-01-15",
+        "thesis_sha256": "1fc6bd6895bd69f5abca90d94a722625c4ba30a4cd079379626294cbfd1e26d0",
+        "ticker": "PURR"
+      },
+      "commit_tx": "0x253b5f1250a8d5a8d168197d3669918449d56665f88e8fd23ae59ad4baf8ac1d",
+      "commit_tx_url": "https://explorer.example.invalid/tx/0x253b5f1250a8d5a8d168197d3669918449d56665f88e8fd23ae59ad4baf8ac1d",
+      "commitment": "0x6b52cca3e699e9abce2f677825d595a2708437572079654c7f9923b8dc094dbb",
+      "committed_at": "2026-11-06T23:19:47Z",
+      "id": 4,
+      "reveal_tx": "0x55b9f157bf30cd6670311993207d968c4dda470571db32391a302e7cd4f85f4b",
+      "reveal_tx_url": "https://explorer.example.invalid/tx/0x55b9f157bf30cd6670311993207d968c4dda470571db32391a302e7cd4f85f4b",
+      "revealed_at": "2026-11-06T23:19:48Z",
+      "salt": "0xb858c9e3709f63f35a491e69539b744db90e046a897133100d00a89aa1560739",
+      "score": {
+        "benchmark": null,
+        "benchmark_return": null,
+        "confidence": 0.55,
+        "direction": "up",
+        "end_close": 0.25,
+        "end_date_used": "2027-01-29",
+        "excess_return": null,
+        "hit": true,
+        "id": 4,
+        "return": 0.25,
+        "start_close": 0.2,
+        "start_date_used": "2027-01-15",
+        "status": "scored",
+        "ticker": "PURR"
+      },
+      "status": "revealed",
+      "verified": true
+    },
+    {
+      "commit_tx": "0xd70d4434299d34dd67406038b3fc24a50b4fea5dbc4ad914068366cc2f3f67a5",
+      "commit_tx_url": "https://explorer.example.invalid/tx/0xd70d4434299d34dd67406038b3fc24a50b4fea5dbc4ad914068366cc2f3f67a5",
+      "commitment": "0x1ed655822c1cc6ca9c26e5aff35230a7b35d68d194e3dbbda90ee12327c9aa63",
+      "committed_at": "2026-11-06T23:19:47Z",
+      "id": 5,
+      "status": "locked"
+    }
+  ],
+  "schema": "research-receipts/v1",
+  "summary": {
+    "brier": 0.187,
+    "calibration": [
+      {
+        "avg_confidence": 0.55,
+        "hit_rate": 1.0,
+        "n": 1,
+        "range": "0.50-0.60"
+      },
+      {
+        "avg_confidence": 0.6166666666666667,
+        "hit_rate": 0.6666666666666666,
+        "n": 3,
+        "range": "0.60-0.70"
+      },
+      {
+        "avg_confidence": 0.7,
+        "hit_rate": 1.0,
+        "n": 1,
+        "range": "0.70-0.80"
+      },
+      {
+        "avg_confidence": null,
+        "hit_rate": null,
+        "n": 0,
+        "range": "0.80-0.90"
+      },
+      {
+        "avg_confidence": null,
+        "hit_rate": null,
+        "n": 0,
+        "range": "0.90-1.00"
+      }
+    ],
+    "hit_rate": 0.8,
+    "hit_rate_ci95": [
+      0.37553462976252533,
+      0.9637758913675698
+    ],
+    "hits": 4,
+    "min_to_judge": 10,
+    "n": 5,
+    "pending": 0,
+    "too_few_to_judge": true
+  }
+}
