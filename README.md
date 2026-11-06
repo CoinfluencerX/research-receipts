@@ -16,7 +16,7 @@ Anyone can claim a great call after the fact. A research track record is only wo
 The public record lives at **[franklineth.ai/receipts](https://franklineth.ai/receipts)**.
 
 ![The /receipts page rendering a demo record (local chain, made-up prices)](docs/images/receipts-page-demo.png)
-<sub>Screenshot of the site page rendering the **demo** record from `scripts/demo_anvil.py`: real contract and CLI on a local chain, with made-up fixture prices. The live page shows only real receipts.</sub>
+<sub>Screenshot of the franklineth.ai page rendering the **demo** record from `scripts/demo_anvil.py`: real contract and CLI on a local chain, with made-up fixture prices. The live page shows only real receipts.</sub>
 
 ---
 
