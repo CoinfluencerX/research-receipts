@@ -74,7 +74,9 @@ def send(ledger: str, sig: str, args: list, rpc_url: str, chain_id: int, source:
             os.remove(pw_file)
     if r.returncode != 0 or not r.stdout.strip():
         # cast can exit 0 on keystore errors, so empty output also counts as failure.
-        tail = "\n".join((r.stderr or "no output from cast").strip().splitlines()[-4:])
+        # Some cast versions print the revert reason on stdout, others on stderr: keep both.
+        detail = "\n".join(x for x in (r.stderr.strip(), r.stdout.strip()) if x) or "no output from cast"
+        tail = "\n".join(detail.splitlines()[-4:])
         raise WalletError("transaction failed: " + tail)
     receipt = json.loads(r.stdout)
     if receipt.get("status") not in ("0x1", 1, "1"):
