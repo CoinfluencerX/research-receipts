@@ -34,7 +34,7 @@ flowchart LR
   C -->|"commit(bytes32)"| L[["ResearchLedger.sol<br/>Robinhood Chain testnet"]]
   R -->|"reveal(id, callJson, salt)"| L
   L -->|Committed / Revealed events| Y
-  P["Prices: yfinance (equities),<br/>Hyperliquid public info API (PURR)"] --> Y
+  P["Prices: yfinance (equities incl. Nasdaq: PURR),<br/>Hyperliquid public info API (crypto)"] --> Y
   Y -->|receipts.json| W["franklineth.ai/receipts<br/>(server-rendered, no wallet)"]
 ```
 

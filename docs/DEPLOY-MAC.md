@@ -78,7 +78,7 @@ Your calls and salts live in `~/.research-receipts/` (private, chmod 700). Back 
 
 ## 7. Dry run: one real receipt (a 1-week PURR price call)
 ```
-.venv/bin/receipts template PURR --event "price horizon" --start <TOMORROW> --end <TOMORROW+7> --direction up --confidence 0.55 > ~/purr-dryrun.json
+.venv/bin/receipts template PURR --asset-type crypto --event "price horizon" --start <TOMORROW> --end <TOMORROW+7> --direction up --confidence 0.55 > ~/purr-dryrun.json
 printf '# PURR dry run\nTesting the receipts flow end to end.\n' > ~/purr-dryrun.md
 .venv/bin/receipts commit ~/purr-dryrun.json ~/purr-dryrun.md --password-keychain research-receipts-testnet
 ```
@@ -89,7 +89,7 @@ A week later:
 ```
 `~/data` is the site's production data folder (per its `AGENTS.md`). franklineth.ai/receipts picks the file up once the page is merged.
 
-PURR prices come from Hyperliquid's public, read-only `info` API. No Hyperliquid account is used.
+With `--asset-type crypto`, PURR prices come from Hyperliquid's public, read-only `info` API (no Hyperliquid account). With `--asset-type equity`, PURR is Hyperliquid Strategies on Nasdaq, priced via yfinance.
 
 ## 8. Merge the website page (check for drift first)
 The page is on branch `feat/research-receipts-page` of `franklineth-blog-work`. Production on this Mac has differed from GitHub before, so check first:

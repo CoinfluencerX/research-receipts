@@ -14,7 +14,8 @@ import json
 import urllib.request
 from pathlib import Path
 
-# Tickers that are not plain equities, and where their prices come from.
+# Crypto tickers and where their prices come from. Only used when a call's asset_type is
+# "crypto": "PURR" with asset_type "equity" is Hyperliquid Strategies (Nasdaq: PURR) via yfinance.
 SPECIAL = {
     "PURR": {"source": "hyperliquid_spot", "coin": "PURR/USDC"},
 }
@@ -57,10 +58,10 @@ class LivePrices:
         self._post = fetch_json
 
     def closes(self, ticker: str, asset_type: str, start: str, end: str) -> dict:
-        spec = SPECIAL.get(ticker)
-        if spec and spec["source"] == "hyperliquid_spot":
-            return self._hyperliquid(spec["coin"], start, end)
         if asset_type == "crypto":
+            spec = SPECIAL.get(ticker)
+            if spec and spec["source"] == "hyperliquid_spot":
+                return self._hyperliquid(spec["coin"], start, end)
             raise PriceError(f"no price source configured for crypto ticker {ticker}; add it to prices.SPECIAL")
         return self._yfinance(ticker, start, end)
 

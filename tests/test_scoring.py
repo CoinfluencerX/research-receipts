@@ -90,3 +90,32 @@ def test_too_few_flag_clears_at_ten():
 def test_empty_summary_is_safe():
     s = scoring.summarize([])
     assert s["n"] == 0 and s["hit_rate"] is None and s["brier"] is None and s["too_few_to_judge"] is True
+
+
+def test_purr_source_follows_asset_type():
+    """PURR is both a Hyperliquid spot token and a Nasdaq ticker (Hyperliquid Strategies).
+    The call's asset_type decides where prices come from."""
+    from receipts.prices import LivePrices
+
+    calls_made = []
+
+    class Spy(LivePrices):
+        def _hyperliquid(self, coin, start, end):
+            calls_made.append(("hyperliquid", coin))
+            return {}
+
+        def _yfinance(self, ticker, start, end):
+            calls_made.append(("yfinance", ticker))
+            return {}
+
+    p = Spy()
+    p.closes("PURR", "crypto", "2027-01-15", "2027-01-29")
+    p.closes("PURR", "equity", "2027-01-15", "2027-01-29")
+    assert calls_made == [("hyperliquid", "PURR/USDC"), ("yfinance", "PURR")]
+
+
+def test_hyperliquid_candles_parse_to_utc_dates():
+    from receipts.prices import parse_hyperliquid_candles
+
+    rows = [{"t": 1799971200000, "c": "0.2"}, {"t": 1800057600000, "c": "0.25"}]  # FIXTURE candles
+    assert parse_hyperliquid_candles(rows) == {"2027-01-15": 0.2, "2027-01-16": 0.25}

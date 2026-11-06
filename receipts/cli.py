@@ -64,7 +64,7 @@ def cmd_init(a, store: Store) -> None:
 
 def cmd_template(a, store: Store) -> None:
     call = {
-        "asset_type": a.asset_type or ("crypto" if a.ticker == "PURR" else "equity"),
+        "asset_type": a.asset_type or "equity",
         "baseline": calls.BASELINE, "confidence": a.confidence, "created_at": calls.now_utc(),
         "direction": a.direction, "event": a.event, "horizon_end_date": a.end, "horizon_start_date": a.start,
         "thesis_sha256": "filled in from your note by `receipts commit`", "ticker": a.ticker,
@@ -269,7 +269,8 @@ def build_parser() -> argparse.ArgumentParser:
     s.add_argument("--end", required=True)
     s.add_argument("--direction", default="up", choices=["up", "down"])
     s.add_argument("--confidence", type=float, default=0.6)
-    s.add_argument("--asset-type", choices=["equity", "crypto"])
+    s.add_argument("--asset-type", choices=["equity", "crypto"],
+                   help="default equity. PURR: equity = Hyperliquid Strategies (Nasdaq), crypto = Hyperliquid spot token")
     s = sub.add_parser("commit")
     s.add_argument("call")
     s.add_argument("note")
