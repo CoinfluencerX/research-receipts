@@ -76,9 +76,9 @@ Then open `https://explorer.testnet.chain.robinhood.com/address/<LEDGER_ADDRESS>
 ```
 Your calls and salts live in `~/.research-receipts/` (private, chmod 700). Back that folder up: **without a salt, a call can never be revealed.**
 
-## 7. Dry run: one real receipt (a 1-week PURR price call)
+## 7. Dry run: one real receipt (a 1-week PURR stock call)
 ```
-.venv/bin/receipts template PURR --asset-type crypto --event "price horizon" --start <TOMORROW> --end <TOMORROW+7> --direction up --confidence 0.55 > ~/purr-dryrun.json
+.venv/bin/receipts template PURR --event "price horizon" --start <TOMORROW> --end <TOMORROW+7> --direction up --confidence 0.55 > ~/purr-dryrun.json
 printf '# PURR dry run\nTesting the receipts flow end to end.\n' > ~/purr-dryrun.md
 .venv/bin/receipts commit ~/purr-dryrun.json ~/purr-dryrun.md --password-keychain research-receipts-testnet
 ```
@@ -89,7 +89,7 @@ A week later:
 ```
 `~/data` is the site's production data folder (per its `AGENTS.md`). franklineth.ai/receipts picks the file up once the page is merged.
 
-With `--asset-type crypto`, PURR prices come from Hyperliquid's public, read-only `info` API (no Hyperliquid account). With `--asset-type equity`, PURR is Hyperliquid Strategies on Nasdaq, priced via yfinance.
+PURR here is Hyperliquid Strategies on Nasdaq (`--asset-type equity`, the default), priced via yfinance and compared with SPY like the other names. If `--start` falls on a weekend, the baseline is the last close before it. (`--asset-type crypto` would score the Hyperliquid spot token instead; it isn't part of the plan.)
 
 ## 8. Merge the website page (check for drift first)
 The page is on branch `feat/research-receipts-page` of `franklineth-blog-work`. Production on this Mac has differed from GitHub before, so check first:

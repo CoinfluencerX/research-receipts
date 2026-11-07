@@ -16,7 +16,7 @@
 | COIN | Q4 FY2026 earnings | Q4 2025: around Feb 12, 2026 (inferred, not confirmed) | the day before the confirmed date | report date → +5 trading days | horizon end |
 | NVDA | Q4 FY2027 earnings | Usually late February (not confirmed in this research) | the day before the confirmed date | report date → +5 trading days | horizon end |
 | CBRS (Cerebras) | Q4 FY2026 earnings | First public report: Q1 on Jun 23, 2026 ([Cerebras IR](https://investors.cerebras.ai/news-releases/news-release-details/cerebras-systems-sets-date-first-quarter-2026-financial-results)). Fiscal year looks like calendar year, so Q4 likely Feb–Mar 2027 (unconfirmed) | the day before the confirmed date | report date → +5 trading days | horizon end |
-| PURR | **Decide which PURR:** Hyperliquid Strategies (Nasdaq: PURR, `--asset-type equity`, earnings call like the others) or the Hyperliquid spot token (`--asset-type crypto`, price horizon) | spot token: n/a | spot token: **Jan 14, 2027** | spot token: Jan 15 → Jan 29, 2027 | Jan 29, 2027 |
+| PURR (Hyperliquid Strategies, Nasdaq) | Q4 FY2026 earnings (`--asset-type equity`, the default) | Newly listed; first annual report timing not confirmed in this research. Check its IR page in early January | the day before the confirmed date | report date → +5 trading days | horizon end |
 
 > **Confirm every report date on the company's investor-relations page** in early January (they announce dates 2–4 weeks ahead). The dates above are last year's pattern, not this year's schedule.
 

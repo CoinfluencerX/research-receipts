@@ -29,7 +29,7 @@ CALLS = [
     ("COIN", "equity", "Q4 FY2026 earnings", "down", 0.60, "2027-02-10", "2027-02-18"),
     ("NVDA", "equity", "Q4 FY2027 earnings", "up", 0.70, "2027-02-24", "2027-03-04"),
     ("CBRS", "equity", "Q4 FY2026 earnings", "up", 0.60, "2027-02-25", "2027-03-05"),
-    ("PURR", "crypto", "price horizon", "up", 0.55, "2027-01-15", "2027-01-29"),
+    ("PURR", "equity", "price horizon", "up", 0.55, "2027-01-15", "2027-01-29"),
     ("HOOD", "equity", "Q1 FY2027 earnings", "up", 0.60, "2027-04-28", "2027-05-06"),  # stays locked
 ]
 
